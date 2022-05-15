@@ -7,7 +7,7 @@ module.exports = {
         "type-enum": [2, "always", ['feat', 'fix', 'docs', 'style', 'refactor', 'test', 'revert', 'ci']],
         "scope-empty": [2, "never"],
         "scope-case": [2, "always", 'lower-case'],
-        "scope-enum": [2, "always", ['test-scope-el', 'test-scope-another-el']],
+        "scope-enum": [2, "always", ['ui', 'logic']],
         "subject-empty": [2, "never"],
         "subject-case": [2, "always", 'sentence-case'],
         "subject-min-length": [2, "always", 4],
