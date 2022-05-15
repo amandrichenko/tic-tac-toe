@@ -1,7 +1,7 @@
 /*global gameUrls */
 
 window.addEventListener('load', function load() {
-  // cec
+  // cecddd
   ;('use strict')
   const startGame = document.querySelector('.startGame')
   const mainGame = document.querySelector('.mainGame')
