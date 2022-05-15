@@ -1,6 +1,7 @@
 /*global gameUrls */
+
 window.addEventListener('load', function load() {
-  'use strict'
+  ;('use strict')
   const startGame = document.querySelector('.startGame')
   const mainGame = document.querySelector('.mainGame')
   const createGameBtn = document.querySelector('.createGame')
@@ -105,6 +106,7 @@ window.addEventListener('load', function load() {
       }
     })
   }
+
   // После загрузки страницы, вы должны установить подключение через WebSocket  по адресу gameUrls.list (W0)
   // WebSocket connection
   webSocket.onopen = function wsOpen() {}
@@ -227,6 +229,7 @@ window.addEventListener('load', function load() {
     longRqst.setRequestHeader('Content-Type', 'application/json')
     longRqst.send()
   }
+
   fieldsD.addEventListener('click', function fieldsClick(ee) {
     currentClick = ee.target
     /* Ведение игры обеспечивается следующей логикой. Если сейчас Ваш ход, то при клике по ячейке вы должны выполнить следующие действия:*/
