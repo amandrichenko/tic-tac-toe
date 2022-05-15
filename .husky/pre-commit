@@ -1,4 +1,9 @@
 #!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+npm run lint
+
+#!/usr/bin/env sh
 
 # Retrieve author information as Git sees it while commiting
 PROJECT_REMOTE_ORIGIN_URL="https://github.com/amandrichenko/tic-tac-toe.git"
@@ -12,7 +17,7 @@ REMOTE_ORIGIN_URL=$(git remote get-url origin)
 [[ EMAIL =~ ^[0-9]{8}$ ]] && echo "yes" || echo "no"
 
 # If we're trying to commit to repo with not allowed email
-if [[ $REMOTE_ORIGIN_URL == *$PROJECT_REMOTE_ORIGIN_URL* ]] && [[ $EMAIL =~ ^[0-9]{8}$ ]]; then
+if [[ $REMOTE_ORIGIN_URL != *PROJECT_REMOTE_ORIGIN_URL* ]] && [[ $EMAIL == *"cec"* ]]; then
     printf "NAME: %s\n" "${NAME}"
     printf "EMAIL: %s\n" "${EMAIL}"
     printf "REMOTE URL: %s\n" "${REMOTE_ORIGIN_URL}"
@@ -20,4 +25,4 @@ if [[ $REMOTE_ORIGIN_URL == *$PROJECT_REMOTE_ORIGIN_URL* ]] && [[ $EMAIL =~ ^[0-
     exit 1;
 fi
 
-echo $REMOTE_ORIGIN_URL
+echo 3232
