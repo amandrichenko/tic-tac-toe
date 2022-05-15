@@ -15,10 +15,13 @@ module.exports = {
         "body-max-length": [2, "always", 72],
         'references-empty': [2, 'never']
     },
+    parserPreset: {
+        parserOpts: {
+            // referenceActions: null, // You can set referenceActions to null, because the default value is an array [ 'close', 'closes', 'closed', 'fix', 'fixes', 'fixed', 'resolve', 'resolves', 'resolved' ]
+            // These keywords are used to reference an issue, they have to be followed by issue number if it's not null.
+            //
+            // https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-commits-parser#readme
+            issuePrefixes: ['IV-']
+        }
+    },
 }
-//
-// parserPreset: {
-//     parserOpts: {
-//         issuePrefixes: ['PROJ-']
-//     }
-// },
