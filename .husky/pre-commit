@@ -9,7 +9,7 @@ npm run lint
 PROJECT_REMOTE_ORIGIN_URL="https://github.com/amandrichenko/tic-tac-toe.git"
 COMPANY_NAME="dewais"
 AUTHORINFO=$(git var GIT_AUTHOR_IDENT) || exit 1
-EMAIL_PATTERN="^[a-z]{3,}\.[a-z]{3,}@dewais.com$"
+EMAIL_PATTERN="^[a-z]{3,}\.[a-z]{3,}@${COMPANY_NAME}.com$"
 NAME=$(printf '%s\n\n' "${AUTHORINFO}" | sed -n 's/^\(.*\) <.*$/\1/p')
 EMAIL=$(printf '%s\n\n' "${AUTHORINFO}" | sed -n 's/^.* <\(.*\)> .*$/\1/p')
 REMOTE_ORIGIN_URL=$(git remote get-url origin)
