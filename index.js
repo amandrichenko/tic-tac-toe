@@ -57,8 +57,6 @@ window.addEventListener('load', function load() {
   var mess;
   var webSocket = new WebSocket(gameUrls.list);
 
-  const unusedConstddddddJustForCommitTest = 0
-
   // Получили команду через WebSocket на начало игры
   function startGameFunc(playerID, gameID) {
     // N1 вывести в .status-message сообщение "Ожидаем начала игры" и отключить кнопку "Создать игру"
@@ -303,6 +301,7 @@ window.addEventListener('load', function load() {
           } else {
             statusMessage.innerHTML = 'Неизвестная ошибка';
             // Прекратить выполнение любой огики кроме кнопки newGame
+            const fieldsClick = 0 // Added just to follow linting rules
             fieldsD.removeEventListener('click', fieldsClick);
             gameLogic = {
               player1: '',

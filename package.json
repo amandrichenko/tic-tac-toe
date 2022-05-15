@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint \"index.js\"",
     "prepare": "husky install"
   },
   "repository": {
@@ -23,6 +24,7 @@
     "@commitlint/config-conventional": "^16.2.4",
     "commitlint-config-jira": "^1.6.4",
     "commitlint-plugin-jira-rules": "^1.6.4",
+    "eslint": "^8.15.0",
     "husky": "^8.0.1"
   }
 }
