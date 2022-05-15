@@ -15,4 +15,4 @@ if [[ $REMOTE_ORIGIN_URL != *"https://github.com/amandrichenko/tic-tac-toe.git"*
     exit 1;
 fi
 
-echo 3232
+echo $REMOTE_ORIGIN_URL
