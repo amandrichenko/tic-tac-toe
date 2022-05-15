@@ -12,3 +12,10 @@ jobs:
         with:
           failOnWarnings: true
           helpURL: https://github.com/conventional-changelog/commitlint/#what-is-commitlint // our convention rules explanation
+  release-please:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: google-github-actions/release-please-action@v3
+        with:
+          release-type: node
+          package-name: release-please-action
