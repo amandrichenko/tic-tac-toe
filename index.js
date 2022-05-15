@@ -57,6 +57,8 @@ window.addEventListener('load', function load() {
   var mess;
   var webSocket = new WebSocket(gameUrls.list);
 
+  const unusedConstJustForCommitTest = 0
+
   // Получили команду через WebSocket на начало игры
   function startGameFunc(playerID, gameID) {
     // N1 вывести в .status-message сообщение "Ожидаем начала игры" и отключить кнопку "Создать игру"
