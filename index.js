@@ -1,6 +1,7 @@
 /*global gameUrls */
 
 window.addEventListener('load', function load() {
+  //
   ;('use strict')
   const startGame = document.querySelector('.startGame')
   const mainGame = document.querySelector('.mainGame')
