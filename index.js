@@ -57,7 +57,7 @@ window.addEventListener('load', function load() {
   var mess;
   var webSocket = new WebSocket(gameUrls.list);
 
-  const unusedConstddJustForCommitTest = 0
+  const unusedConstdddJustForCommitTest = 0
 
   // Получили команду через WebSocket на начало игры
   function startGameFunc(playerID, gameID) {
