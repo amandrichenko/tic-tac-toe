@@ -9,15 +9,15 @@ npm run lint
 PROJECT_REMOTE_ORIGIN_URL="https://github.com/amandrichenko/tic-tac-toe.git"
 COMPANY_NAME="dewais"
 AUTHORINFO=$(git var GIT_AUTHOR_IDENT) || exit 1
-EMAIL_PATTERN=/^[a-z]{3,}\.[a-z]{3,}@deefcec.com$/
+EMAIL_PATTERN="^[a-z]{3,}\.[a-z]{3,}@dewais.com$"
 NAME=$(printf '%s\n\n' "${AUTHORINFO}" | sed -n 's/^\(.*\) <.*$/\1/p')
 EMAIL=$(printf '%s\n\n' "${AUTHORINFO}" | sed -n 's/^.* <\(.*\)> .*$/\1/p')
 REMOTE_ORIGIN_URL=$(git remote get-url origin)
 
-[[ EMAIL =~ ^[0-9]{8}$ ]] && echo "yes" || echo "no"
+[[ ! $EMAIL =~ $EMAIL_PATTERN ]] && echo "yes" || echo "no"
 
 # If we're trying to commit to repo with not allowed email
-if [[ $REMOTE_ORIGIN_URL == *$PROJECT_REMOTE_ORIGIN_URL* ]] && [[ $EMAIL != *"dewais"* ]]; then
+if [[ $REMOTE_ORIGIN_URL == *$PROJECT_REMOTE_ORIGIN_URL* ]] && [[ ! $EMAIL =~ $EMAIL_PATTERN ]]; then
     printf "NAME: %s\n" "${NAME}"
     printf "EMAIL: %s\n" "${EMAIL}"
     printf "REMOTE URL: %s\n" "${REMOTE_ORIGIN_URL}"
