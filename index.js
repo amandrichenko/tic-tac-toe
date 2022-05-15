@@ -15,7 +15,7 @@ window.addEventListener('load', function load() {
   let xhr
   let pst
   const rqst = {
-    register: '',
+    register: 'd',
   }
   const rqst2 = {
     register: '',
