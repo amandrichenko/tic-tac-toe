@@ -19,3 +19,5 @@ if [[ $REMOTE_ORIGIN_URL != *"https://github.com/amandrichenko/tic-tac-toe.git"*
     echo "\nOh, please stop. I cannot allow you to commit with your current email: ${EMAIL}\n"
     exit 1;
 fi
+
+echo 3232
