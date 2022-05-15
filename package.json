@@ -19,11 +19,13 @@
   },
   "homepage": "https://github.com/amandrichenko/tic-tac-toe#readme",
   "devDependencies": {
+    "@commitlint/cli": "^16.3.0",
+    "@commitlint/config-conventional": "^16.2.4",
     "husky": "^8.0.0"
   },
   "husky": {
     "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+      "commit-msg": "npx commitlint --edit $1"
     }
   }
 }
