@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.1.0](https://github.com/amandrichenko/tic-tac-toe/compare/v1.0.0...v1.1.0) (2022-05-15)
+
+
+### Features
+
+* **ui:** Test IV-1 ([1fd3c66](https://github.com/amandrichenko/tic-tac-toe/commit/1fd3c66bd742bae6031f0a9eb83ec4003f3a7c47))
+* **ui:** Test IV-1 ([6482562](https://github.com/amandrichenko/tic-tac-toe/commit/648256250d27ff7109a1dbbb0f5da3def92ae29d))
+
+
+### Bug Fixes
+
+* **ui:** Test IV-1 ([e8bd46c](https://github.com/amandrichenko/tic-tac-toe/commit/e8bd46c346b401ad3c4d2641057c1939bb866b00))
+
 ## 1.0.0 (2022-05-15)
 
 
