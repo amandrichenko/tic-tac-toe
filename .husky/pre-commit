@@ -1,9 +1,4 @@
 #!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
-
-npm run lint
-
-#!/bin/sh
 
 # Retrieve author information as Git sees it while commiting
 AUTHORINFO=$(git var GIT_AUTHOR_IDENT) || exit 1
