@@ -6,15 +6,13 @@ npm run lint
 #!/usr/bin/env sh
 
 # Retrieve author information as Git sees it while commiting
-PROJECT_REMOTE_ORIGIN_URL="https://github.com/amandrichenko/tic-tac-toe.git"
-COMPANY_NAME="dewais"
+PROJECT_REMOTE_ORIGIN_URL="https://github.com/amandrichenko/tic-tac-toe.git" # Set this according to related project
+COMPANY_NAME="dewais" # Set this according to company email
 AUTHORINFO=$(git var GIT_AUTHOR_IDENT) || exit 1
 EMAIL_PATTERN="^[a-z]{3,}\.[a-z]{3,}@${COMPANY_NAME}.com$"
 NAME=$(printf '%s\n\n' "${AUTHORINFO}" | sed -n 's/^\(.*\) <.*$/\1/p')
 EMAIL=$(printf '%s\n\n' "${AUTHORINFO}" | sed -n 's/^.* <\(.*\)> .*$/\1/p')
 REMOTE_ORIGIN_URL=$(git remote get-url origin)
-
-[[ ! $EMAIL =~ $EMAIL_PATTERN ]] && echo "yes" || echo "no"
 
 # If we're trying to commit to repo with not allowed email
 if [[ $REMOTE_ORIGIN_URL == *$PROJECT_REMOTE_ORIGIN_URL* ]] && [[ ! $EMAIL =~ $EMAIL_PATTERN ]]; then
@@ -23,6 +21,6 @@ if [[ $REMOTE_ORIGIN_URL == *$PROJECT_REMOTE_ORIGIN_URL* ]] && [[ ! $EMAIL =~ $E
     printf "REMOTE URL: %s\n" "${REMOTE_ORIGIN_URL}"
     echo "\nOh, please stop. I cannot allow you to commit with your current email: ${EMAIL}\n"
     exit 1;
+    else
+       echo "\nYour git name and email are setup correctly!\n"
 fi
-
-echo 3232
