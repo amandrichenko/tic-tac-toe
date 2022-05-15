@@ -1,5 +1,5 @@
 name: Lint Commit Messages
-on: [pull_request, push]
+on: [ pull_request, push ]
 
 jobs:
   commitlint:
@@ -7,7 +7,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          fetch-depth: 0
+          fetch-depth: 10
       - uses: wagoid/commitlint-github-action@v4
         with:
           failOnWarnings: true
