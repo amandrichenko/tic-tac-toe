@@ -13,9 +13,8 @@ module.exports = {
         "subject-min-length": [2, "always", 4],
         "subject-full-stop": [2, "never", '.'],
         "body-max-length": [2, "always", 72],
-
+        'references-empty': [2, 'never']
     },
-    'references-empty': [2, 'never']
 }
 //
 // parserPreset: {
