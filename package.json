@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "prettier --check",
+    "lint": "eslint \"index.js\" && prettier --check ./index.js",
     "prepare": "husky install"
   },
   "repository": {
