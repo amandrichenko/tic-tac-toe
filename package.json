@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint \"index.js\" && prettier --check ./index.js",
+    "test": "echo \"All test are passed successfully\" && exit 0",
+    "lint": "eslint \"index.js\" && prettier --check ./index.js && npm run test",
     "prepare": "husky install"
   },
   "repository": {

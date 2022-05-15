@@ -1,65 +1,65 @@
 /*global gameUrls */
 window.addEventListener('load', function load() {
   'use strict'
-  var startGame = document.querySelector('.startGame')
-  var mainGame = document.querySelector('.mainGame')
-  var createGameBtn = document.querySelector('.createGame')
-  var statusMessage = document.querySelector('.status-message') // их два
-  var statusMessage2 = document.querySelectorAll('.status-message')
-  var existingGames = document.querySelector('.existing-games')
-  var newGameBtn = document.querySelector('.newGame')
-  var fieldsD = document.querySelector('.field')
-  var row
-  var cell
-  var ws
-  var xhr
-  var pst
-  var rqst = {
+  const startGame = document.querySelector('.startGame')
+  const mainGame = document.querySelector('.mainGame')
+  const createGameBtn = document.querySelector('.createGame')
+  const statusMessage = document.querySelector('.status-message') // их два
+  const statusMessage2 = document.querySelectorAll('.status-message')
+  const existingGames = document.querySelector('.existing-games')
+  const newGameBtn = document.querySelector('.newGame')
+  const fieldsD = document.querySelector('.field')
+  let row
+  let cell
+  let ws
+  let xhr
+  let pst
+  const rqst = {
     register: '',
   }
-  var rqst2 = {
+  const rqst2 = {
     register: '',
   }
-  var pstStartGame
-  var obj
-  var temp
-  var status = {
+  let pstStartGame
+  let obj
+  let temp
+  const status = {
     side: '',
     move: '',
   }
-  var li
-  var i
-  var j
-  var liD
-  var registerString
-  var gameId
-  var registerInGame2
-  var ul = document.querySelector('ul')
-  var registerString2
-  var g1
-  var g1Rqst = {
+  let li
+  let i
+  let j
+  let liD
+  let registerString
+  let gameId
+  let registerInGame2
+  const ul = document.querySelector('ul')
+  let registerString2
+  let g1
+  const g1Rqst = {
     move: '',
   }
-  var win
-  var longRqst
-  var resp
-  var resdp3 = 2
-  var resdcececp = 1
+  let win
+  let longRqst
+  let resp
+  const resdp3 = 2
+  const resdcececp = 1
   const xxxx = resdp3 + resdcececp
   console.log(xxxx)
-  var putRqst
-  var gameLogic = {
+  let putRqst
+  let gameLogic = {
     player1: '',
     player2: '',
     currentMove: 'x',
   }
-  var playerId
-  var currentClick
-  var cell1111
-  var g3Obj
-  var error
-  var mess
-  var webSocket = new WebSocket(gameUrls.list)
+  let playerId
+  let currentClick
+  let cell1111
+  let g3Obj
+  let error
+  let mess
+  const webSocket = new WebSocket(gameUrls.list)
 
   // Получили команду через WebSocket на начало игры
   function startGameFunc(playerID, gameID) {
